@@ -1,0 +1,114 @@
+
+/*반응형 */
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){
+
+    .icon{
+        top: 18px; left: 27px;
+        width: 36px; height: 36px;
+    }
+    .icon h2{
+        font-size: 1.2rem;
+    }
+    .iconbox_1{
+        width: 36px; height: 36px;
+        top: 18px; left: 27px;
+    }
+    .iconbox_2{
+        width: 36px; height: 36px;
+        top: 18px; left: 27px;
+    }
+
+
+
+
+    .menuBtn{
+        top:18px; right: 27px;
+        width: 36px; height: 36px;
+    }
+    .headline ul{
+        top:18px;
+        padding: 12px 48px 12px 24px;
+    }
+    .headline li{
+        margin: 0 10px;
+    }
+
+
+
+
+    .main{
+        overflow: hidden;
+    }
+    .main_wrap h2{
+        font-size: 24px;
+    }
+    .main article img{
+        width: 64px;
+        margin: 8px 8px 0 8px;
+    }
+    .circle article:nth-of-type(1){
+        width: 360px; height: 360px;
+        left: calc(50% - 180px);
+        top: calc(50% - 180px);
+    }
+    .circle article:nth-of-type(2){
+        width: 360px; height: 360px;
+        left: calc(50% - 180px);
+        top: calc(50% - 180px);
+    }
+    .circle article:nth-of-type(3){
+        width: 360px; height: 360px;
+        left: calc(50% - 180px);
+        top: calc(50% - 180px);
+    }
+    .circle article:nth-of-type(5){
+        width: 360px; height: 360px;
+        left: calc(50% - 180px);
+        top: calc(50% - 180px);
+    }
+
+
+
+    .about{
+        padding: 0;
+    }
+    .about_flex{
+        flex-wrap: wrap-reverse;
+    }
+    .about_left{
+        width: 100%;
+    }
+    .about_right{
+        width: 100%;
+        margin: 0 24px;
+    }
+
+
+
+    .contact_flex{
+        flex-wrap: wrap-reverse;
+    }
+    .contact_left{
+        width: 100%;
+    }
+    .contact_right{
+        width: 100%;
+        margin: 0 24px;
+    }
+
+
+
+
+    .project_list ul{
+        flex-wrap: wrap;
+    }
+    .project_list li span{
+        width: 100%;
+        justify-content: center;
+    }
+
+
+
+
+}
