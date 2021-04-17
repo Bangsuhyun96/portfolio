@@ -4,7 +4,7 @@
 *{margin:0; padding:0; box-sizing: border-box; word-break: keep-all;}
 header{width: 100%; animation: AnimationName 4s ease infinite; background: linear-gradient(-45deg, #f7a194, #99d4f4, #a6d5a7, #fee795); background-size: 400% 400%;
 }
-body{font-family:'Cafe24SsurroundAir'; color:rgb(57,63,72);}
+body{font-family:'Cafe24SsurroundAir'; color:rgb(57,63,72); scroll-behavior: smooth;}
 footer{background-color: #FFF; text-align: center; padding:35px 0;}
 h1{font-size: 72px; font-weight: bold;}
 h2{font-size: 50px; text-align: center; font-weight: bold; padding: 64px 0;}
@@ -378,7 +378,11 @@ nav li a::after{
 
 
 /*contact*/
-#contact{background-color:#FFF;}
+#contact{background-image: url(../img/bg_contact.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100%;
+}
 .contact_flex{
     position: relative;
     display: flex;
@@ -391,11 +395,17 @@ nav li a::after{
     width: 50%; 
     margin: 0 30px 0 0;
 }
-.contact_right img{
-  width: 100%;
+.contact_right h3{
+    color: #fff;
+    margin: 6px;
+}
+.contact_right h4{
+    color: #fff;
+    margin: 6px;
 }
 #contacth2 h2{
   position: relative;
+  color: #FFF;
 }
 #contacth2 h2 span{
   position: absolute;
@@ -404,9 +414,13 @@ nav li a::after{
   margin-left: -135px;
   width: 265px;
   height: 10px;
-  background-color: #bcbcbc;
+  background-color: #fee795;
   z-index: -1;
 }
+.contact_right h3{
+    margin:8px;
+}
+
 
 .top{ width: 68px; height: 68px;
     position: fixed;
