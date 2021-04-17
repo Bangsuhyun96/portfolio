@@ -1,0 +1,328 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방수현</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <iink rel="stylesheet" href="css/animation.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <script src="js/index.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function($) {
+            //메뉴이동
+            $(".scroll").click(function(event){     
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+            }); 
+
+            //로고,top버튼
+            $(".top").click(function(event){
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+            }); 
+
+            //햄버거
+            $(".menuBtn").click(function(){
+                if($(".headline ul").css("right") == "-10px"){ 
+                    $('.headline ul').animate({
+                        right: 20, opacity:1
+                    }, 400);
+                    $('.headline li').css("display","block");
+                } else {  
+                    $('.headline ul').animate({
+                        right: -10, opacity:0
+                    }, 200);   
+                    $('.headline li').css("display","none");
+                }
+            });
+
+            //스크롤링
+            $(window).scroll(function(){
+                const scrollPos = $(this).scrollTop();
+                const aboutPos = $('#about').scrollTop();
+                if(scrollPos > aboutPos){
+                    $('#about_right').addClass('slide-left');
+                    $('#about_left').addClass('slide-right');
+                    $('#abouth2').addClass('tracking-in-expand-fwd-bottom');
+                    $('#abouth2 h2 span').addClass('scale-up-hor-left');
+                }
+                else{
+                    $('#about_right').removeClass('slide-left');
+                    $('#about_left').removeClass('slide-right');
+                    $('#abouth2').removeClass('tracking-in-expand-fwd-bottom');
+                    $('#abouth2 h2 span').removeClass('scale-up-hor-left');
+                }
+            });
+            $(window).scroll(function(){
+                const scrllPos = $(this).scrollTop();
+                const projectPos = $('#project').scrollTop();
+                if(scrllPos > $('#project').offset().top - $(window).height()){
+                    $('#projecth2').addClass('tracking-in-expand-fwd-bottom');
+                    $('#projecth2 h2 span').addClass('scale-up-hor-left');
+                    $('.project_tap ul').addClass('slide-top');
+                    $('.project_list li').addClass('slide-top-2');
+                }
+                else{
+                    $('#projecth2').removeClass('tracking-in-expand-fwd-bottom');
+                    $('#projecth2 h2 span').removeClass('scale-up-hor-left');
+                    $('.project_tap ul').removeClass('slide-top');
+                    $('.project_list li').removeClass('slide-top-2');
+                }
+            });
+            $(window).scroll(function(){
+                const scrPos = $(this).scrollTop();
+                const contactPos = $('#contact').scrollTop();
+                if(scrPos > $('#contact').offset().top - $(window).height()){
+                    $('#contacth2').addClass('tracking-in-expand-fwd-bottom');
+                    $('#contacth2 h2 span').addClass('scale-up-hor-left');
+                    $('.contact_right').addClass('slide-left');
+                    $('.contact_left').addClass('slide-right');
+                }
+                else{
+                    $('#contacth2').removeClass('tracking-in-expand-fwd-bottom');
+                    $('#contacth2 h2 span').removeClass('scale-up-hor-left');
+                    $('.contact_right').removeClass('slide-left');
+                    $('.contact_left').removeClass('slide-right');
+                }
+            });
+        }); 
+        //메뉴 창 열기
+        var menuCnt = 0;
+        function menuOnOff(){
+            if(menuCnt == 0){
+                document.querySelector('.menuBtn span:nth-child(1)').style="animation: menuOpen_1 0.4s forwards;";
+
+                document.querySelector('.menuBtn span:nth-child(2)').style="animation: menuOpen_2 0.4s forwards;";
+
+                document.querySelector('.menuBtn span:nth-child(3)').style="animation: menuOpen_3 0.4s forwards;";
+
+                document.querySelector('.menuBtn span:nth-child(4)').style="animation: menuOpen_4 0.4s forwards;";
+                menuCnt++;   
+            }
+            else{
+                document.querySelector('.menuBtn span:nth-child(1)').style="animation: menuClose_1 0.4s forwards;";
+                document.querySelector('.menuBtn span:nth-child(2)').style="animation: menuClose_2 0.4s forwards;";
+                document.querySelector('.menuBtn span:nth-child(3)').style="animation: menuClose_3 0.4s forwards;";
+                document.querySelector('.menuBtn span:nth-child(4)').style="animation: menuClose_4 0.4s forwards;";
+                menuCnt=0;
+            }
+        }
+        // PC, Responsive 분류
+        function categoryView(categoryName) {
+            var article = document.querySelectorAll('.project_list ul li');
+            var articleH2 = document.querySelectorAll('.project_list ul li p');
+            for (i=0; i < article.length; i++) {
+                if ( articleH2[i].textContent.indexOf(categoryName) == -1 ) {
+                    article[i].style.display = "none"
+                } else { 
+                    article[i].style.display = "block"
+                }
+            }
+        }
+    </script>
+</head>
+<body>  
+    <div class="wrap">
+        <header id="header">
+            <div class="headline">
+                <a href="#header" class="top">
+                    <div class="icon">
+                        <h2>B</h2>
+                    </div>
+                    <span class="iconbox_1"></span>
+                    <span class="iconbox_2"></span>
+                </a>
+                <nav>
+                    <div class="menuBtn" onclick="menuOnOff()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#header" class="scroll">
+                                Intro
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="scroll">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project" class="scroll">
+                                Project
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="scroll">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="main_wrap">
+                    <h2>WEB PUBLISHER</h2>
+                    <h4>방수현의 포트폴리오 입니다!</h4>
+                    <article>
+                        <img src="img/icon_html.png" alt="HTML 아이콘">
+                        <img src="img/icon_css.png" alt="CSS 아이콘">
+                        <img src="img/icon_js.png" alt="JS 아이콘">
+                        <img src="img/icon_jquery.png" alt="JQuery 아이콘">
+                    </article>
+                    <div class="circle">
+                        <article class="loader"></article>
+                        <article class="loader1"></article>
+                        <article class="loader2"></article>
+                        <article class="loader3"></article>
+                        <article class="loader4"></article>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <section id="about" class="about">
+            <div id="abouth2">
+                <h2><span></span>ABOUT</h2>
+            </div>
+            <div class="about_flex">                
+                <div id="about_left" class="about_left">
+                    <img src="img/bang1.jpg" alt="방수현 이미지">
+                </div>
+                <div id="about_right" class="about_right">
+                    <h3># Profile</h3>
+                        <h4><br>방수현 / 경기도 시흥 거주</h4>
+                        <h4>1996. 01. 02</h4>
+                        <h4>010 4018 9692</h4>
+                        <h4>bangt9687@naver.com</h4>
+                    <h3><br># History</h3>
+                        <h4><br>20.08.20 ~ 20.12.23 웹퍼블리셔 양성 <br>(웹표준 프론트엔드 웹퍼블리싱 HTML5 CSS3 JQuery)과정 수료</h4>
+                    <h3><br># About me</34>
+                        <h4><br>안녕하세요! 신입 웹퍼블리셔 방수현입니다.</h4>
+                        <h4>방: </h4>
+                        <h4>수: </h4>
+                        <h4>현: </h4>
+                </div>
+            </div>
+        </section>
+        <section id="project" class="project">
+            <div id="projecth2">
+                <h2><span></span>PROJECT</h2>
+            </div>
+            <div class="project_tap">
+                <ul>
+                    <li onclick="categoryView('')"><a>All</a></li>
+                    <li onclick="categoryView('PC')"><a>PC</a></li>
+                    <li onclick="categoryView('반응형')"><a>반응형</a></li>
+                </ul>
+            </div>
+            <div class="project_list">
+                <ul>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/pngegg.png" alt="포트폴리오2 홈페이지">
+                                <p>#개인 포트폴리오 반응형</p>
+                            </span>
+                        </a>
+                    </li>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/portfolio1.png" alt="포트폴리오1 홈페이지">
+                               <p>#개인 포트폴리오 반응형</p>
+                           </span>
+                        </a>
+                    </li>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/etiqa.png" alt="에티카 홈페이지">
+                               <p>#에티카 반응형</p>
+                           </span>
+                        </a>
+                    </li>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/netflix.png" alt="넷플릭스 홈페이지">
+                                <p>#넷플릭스 반응형</p>
+                           </span>
+                        </a>
+                    </li>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/tesla.png" alt="테슬라 홈페이지">
+                                <p>#테슬라 반응형</p>
+                           </span>
+                        </a>
+                    </li>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/nike.png " alt="나이키 홈페이지">
+                               <p>#나이키 반응형</p>
+                           </span>
+                        </a>
+                    </li>
+                    <li data-name="responsive">
+                        <a>
+                            <span>
+                                <img src="../portfolio/img/sml.png" alt="스티키 몬스터 랩 홈페이지">
+                                <p>#S.M.L 반응형</p>
+                           </span>     
+                        </a>
+                    </li>
+                    <li>
+                        <a data-name="PC">
+                            <span>
+                                <img src="../portfolio/img/apple.png" alt="애플 홈페이지"> 
+                                <p>#애플 PC</p>
+                           </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <div id="contacth2">
+                <h2><span></span>CONTACT</h2>
+            </div>
+            <div class="contact_flex">
+                <div class="contact_left">
+                    <h3>asd</h3>
+                    <h4>asd</h4>
+                    <h3>asd</h3>
+                    <h4>asd</h4>
+                    <h3>asd</h3>
+                    <h4>asd</h4>
+                    <h3>asd</h3>
+                    <h4>asd</h4>
+                    <h3>asd</h3>
+                    <h4>asd</h4>
+                </div>
+                <div class="contact_right">
+                    <img src="img/bg_contact.jpg" alt="contact 이미지">
+                </div>
+            </div>
+        </section>
+        <footer>
+            ⓒ 2021 방수현. All rights reserved.
+        </footer>
+        <div class="top">
+            <a href="#header" class="top">
+                TOP
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
