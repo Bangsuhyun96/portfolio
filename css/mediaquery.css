@@ -1,6 +1,21 @@
 
 /*반응형 */
-@media screen and (max-width: 1024px){}
+@media screen and (max-width: 1024px){
+    .projectplus dt{
+        height: 98%;
+        flex-wrap: wrap-reverse;
+    }
+    .projectplus dt div{
+        height: 49%; width: 100%;
+        margin: 4px;
+    }
+    .imgline{
+        display: none;
+    }
+    .projectplus dt div:nth-of-type(2){
+        margin: 0 0 0 10%;
+    }
+}
 @media screen and (max-width: 768px){
 
     .icon{
@@ -43,7 +58,7 @@
     .main_wrap h2{
         font-size: 24px;
     }
-    .main article img{
+    .main_wrap_img img{
         width: 64px;
         margin: 8px 8px 0 8px;
     }
@@ -67,7 +82,9 @@
         left: calc(50% - 180px);
         top: calc(50% - 180px);
     }
-
+    .info li{
+        width: 400px; height: 400px;
+    }
 
 
     .about{
@@ -106,8 +123,42 @@
         width: 100%;
         justify-content: center;
     }
+    .projectplus h2{
+        font-size: 36px;
+    }
+    .projectplus h3{
+        font-size: 16px;
+    }
+    .projectplus button{
+        width: 100%;
+    }
+    .projectplus button{
+        width: 300px;
+    }
+    .btn_view{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .projectplus dt{
+        height: 672px;
+    }
+    .projectplus dt img{
+        width: 300px; height: 300px;
+        margin: 0 0 0 10%;
+    }
 
 
-
+    .topa{
+        width: 45px; height: 45px;
+    }
+    .topa a{
+        padding: 12px 0;
+    }
+    .topa span:nth-of-type(1){
+        left: 14px;
+    }
+    .topa span:nth-of-type(2){
+        display: none;
+    }
 
 }
