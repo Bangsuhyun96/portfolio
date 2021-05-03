@@ -1,5 +1,13 @@
 
 /*반응형 */
+@media screen and (max-width: 1280px){
+    .imgline{
+        display: none;
+    }
+    .projectplus dt img{
+        width: 100%;
+    }
+}
 @media screen and (max-width: 1024px){
     .projectplus dt{
         height: 98%;
@@ -9,11 +17,11 @@
         height: 49%; width: 100%;
         margin: 4px;
     }
-    .imgline{
-        display: none;
-    }
     .projectplus dt div:nth-of-type(2){
         margin: 0 0 0 10%;
+    }
+    .projectplus dt img{
+        width: 500px;
     }
 }
 @media screen and (max-width: 768px){
