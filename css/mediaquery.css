@@ -58,6 +58,7 @@
 
 
 
+
     .main{
         overflow: hidden;
     }
@@ -164,13 +165,19 @@
         flex-wrap: wrap;
     }
     .projectplus dt{
-        height: 672px;
+        height: 867px;
+        width: 100%;
+    }
+    .projectplus .btn_view{
+        display: block;
     }
     .projectplus dt img{
         width: 300px; height: 300px;
         margin: 0 0 0 10%;
     }
-
+    .projectplus dt div{
+        margin:0;
+    }
 
     .topa{
         width: 45px; height: 45px;
