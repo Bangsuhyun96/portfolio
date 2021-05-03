@@ -174,14 +174,14 @@
     }
     .projectplus dt{
         height: 867px;
-        width: 100%;
+        width: 115%;
     }
     .projectplus .btn_view{
         display: block;
     }
     .projectplus dt img{
         width: 300px; height: 300px;
-        margin: 0 0 0 10%;
+        margin: 0 0 0 5%;
     }
     .projectplus dt div{
         margin:0;
