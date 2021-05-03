@@ -18,6 +18,10 @@
 }
 @media screen and (max-width: 768px){
 
+    footer{
+        padding: 12px 0;
+    }
+
     .icon{
         top: 18px; left: 27px;
         width: 36px; height: 36px;
@@ -102,7 +106,10 @@
     }
 
 
-
+    .contact{
+        
+        height: 100vh;
+    }
     .contact_flex{
         flex-wrap: wrap-reverse;
     }
@@ -113,6 +120,21 @@
         width: 100%;
         margin: 0 24px;
     }
+    .contactme{
+        width: 300px;
+        height: 400px;
+    }
+    .contactme h2{
+        padding: 36px 0 6px 0;
+    }
+    .contactme h3{
+        line-height: 1.1;
+    }
+    .contactme h4{
+        line-height: 1.1;
+    }
+
+
 
 
 

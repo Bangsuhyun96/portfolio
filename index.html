@@ -94,6 +94,8 @@
                     $('#projecth2').addClass('tracking-in-expand-fwd-bottom');
                     $('#projecth2 h2 span').addClass('scale-up-hor-left');
                     $('.project_tap ul').addClass('slide-top');
+                    $('.project_tap h4').addClass('slide-top');
+                    $('.project_tap h5').addClass('slide-top');
                     $('.project_list li').addClass('slide-top-2');
                     $('.projectplus li').removeClass('slide-top-2');
                 }
@@ -101,6 +103,8 @@
                     $('#projecth2').removeClass('tracking-in-expand-fwd-bottom');
                     $('#projecth2 h2 span').removeClass('scale-up-hor-left');
                     $('.project_tap ul').removeClass('slide-top');
+                    $('.project_tap h4').remove('slide-top');
+                    $('.project_tap h5').remove('slide-top');
                     $('.project_list li').removeClass('slide-top-2');
                     $('.projectplus dt').animate({
                         opacity:0, 'z-index':-10
@@ -299,7 +303,8 @@
                     <li onclick="categoryView('PC')"><a>PC</a></li>
                     <li onclick="categoryView('반응형')"><a>반응형</a></li>
                 </ul>
-                <h2>지연에 관한 설명</h2>
+                <h4 style="text-align: center;">클릭 시 페이지로 이동됩니다.</h4>
+                <h5 style="text-align: center;">오류 시 새로고침을 눌러주세요.</h5>
             </div>
             <div class="project_list">
                 <ul>

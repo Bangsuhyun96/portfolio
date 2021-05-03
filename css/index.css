@@ -386,7 +386,7 @@ nav li a::after{
 .project_tap ul{
     display: flex;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 .project_tap li{
     margin: 0 15px;
@@ -406,6 +406,12 @@ nav li a::after{
 .project_tap li:hover a{
     background-color: #303a48;
     color: #FFF;
+}
+.project_tap h4{
+    font-size: 12px;
+}
+.project_tap h5{
+    font-size: 8px;
 }
 
 .project_list{
