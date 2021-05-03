@@ -52,7 +52,9 @@
     .headline li{
         margin: 0 6px;
     }
-
+    .headline li a{
+        font-size: 0.8rem;
+    }
 
 
 
