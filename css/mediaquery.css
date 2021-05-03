@@ -47,10 +47,10 @@
     }
     .headline ul{
         top:18px;
-        padding: 12px 48px 12px 24px;
+        padding: 10px 36px 10px 20px;
     }
     .headline li{
-        margin: 0 10px;
+        margin: 0 6px;
     }
 
 
@@ -107,6 +107,9 @@
 
 
 
+    #contact{
+        background-attachment: unset;
+    }
     .contact_flex{
         flex-wrap: wrap-reverse;
     }
